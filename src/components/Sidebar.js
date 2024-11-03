@@ -1,7 +1,7 @@
-import '../styles/Sidebar.scss';
-import InputArray from './InputArray';
 import { useAnimation } from '../hooks';
+import '../styles/Sidebar.scss';
 import CustomScrollbar from './CustomScrollbar';
+import InputArray from './InputArray';
 
 export default function Sidebar() {
   const {
@@ -12,14 +12,14 @@ export default function Sidebar() {
     selectBuildMaxHeap,
     selectBuildMinHeapAndSort,
     selectBuildMaxHeapAndSort
-  } = useAnimation()
+  } = useAnimation();
 
   const instructions = {
     i1: '1) Press [Enter] for next input.',
     i2: '2) Max number of values = 63.',
     i3: '3) Value range (-999 to +999).',
     i4: '4) Fill all the values in the array in order to select an operation.'
-  }
+  };
 
   return (
     <div
@@ -31,7 +31,7 @@ export default function Sidebar() {
         )
       }}
     >
-      <h1 className="main-head">HeapSortVisualizer();</h1>
+      <h1 className="main-head">HeapSortVisualizer</h1>
 
       <CustomScrollbar>
         <div className="sidebar-content">
@@ -40,6 +40,7 @@ export default function Sidebar() {
             <p className="p-info">{instructions.i1}</p>
             <p className="p-info">{instructions.i2}</p>
             <p className="p-info">{instructions.i3}</p>
+            <p className="p-info">{instructions.i4}</p>
             <InputArray />
           </div>
 
@@ -102,17 +103,15 @@ export default function Sidebar() {
             >
               <p>Build Max Heap And Sort</p>
             </button>
-
-            <p className="p-info">{instructions.i4}</p>
           </div>
 
+          {/* Moved the developers section to the end */}
           <div className="author-details">
-            <p className="p-head">Developer:</p>
-            <a
-              className="p-info"
-              href="https://github.com/shubhamistic/"
-              target="_blank"
-            >@Shubhamistic</a>
+            <p className="p-head">Developers: </p>
+            <div className="developer-names">
+              <div className="developer-name">• ABHISHEK GODARA (22BCS007)</div>
+              <div className="developer-name">• AJAY BAIRWA (22BCS011)</div>
+            </div>
           </div>
         </div>
       </CustomScrollbar>
